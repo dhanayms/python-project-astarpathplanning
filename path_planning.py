@@ -9,22 +9,7 @@ percentOfObstacle = 0.9  # 30% - 60%, random
 
 def generateMap2d(size_):
 
-    '''Generates a random 2d map with obstacles (small blocks) randomly distributed. 
-       You can specify any size of this map but your solution has to be independent of map size
-
-    Parameters:
-    -----------
-    size_ : list
-        Width and height of the 2d grid map, e.g. [60, 60]. The height and width of the map shall be greater than 20.
-
-    Returns:
-    --------
-        map2d : array-like, shape (size_[0], size_[1])
-           A 2d grid map, cells with a value of 0: Free cell; 
-                                                -1: Obstacle;
-                                                -2: Start point;
-                                                -3: Goal point;
-    '''
+    
     
     size_x, size_y = size_[0], size_[1]
 
@@ -44,29 +29,7 @@ def generateMap2d(size_):
 
 # Generate 2d grid map with rotated-H-shape object
 def generateMap2d_obstacle(size_):
-#     '''Generates a random 2d map with a rotated-H-shape object in the middle and obstacles (small blocks) randomly distributed.
-#        You can specify any size of this map but your solution has to be independent of map size
-#
-#     Parameters:
-#     -----------
-#     size_ : list
-#         Width and height of the 2d grid map, e.g. [60, 60]. The height and width of the map shall be greater than 40.
-#
-#     Returns:
-#     --------
-#         map2d : array-like, shape (size_[0], size_[1])
-#            A 2d grid map, cells with a value of 0: Free cell;
-#                                                -1: Obstacle;
-#                                                -2: Start point;
-#                                                -3: Goal point;
-#
-#        [ytop, ybot, minx] : list
-#            information of the rotated-H-shape object
-#            ytop - y coordinate of the top horizontal wall/part
-#            ybot - y coordinate of the bottom horizontal wall/part
-#            minx - X coordinate of the vertical wall
-#     '''
-#
+#    
     size_x, size_y = size_[0], size_[1]
     map2d = generateMap2d(size_)
 
@@ -105,26 +68,7 @@ def generateMap2d_obstacle(size_):
 # # helper function for plotting the result
 def plotMap(map2d_, path_, title_ =''):
 
-    '''Plots a map (image) of a 2d matrix with a path from start point to the goal point.
-        cells with a value of 0: Free cell;
-                             -1: Obstacle;
-                             -2: Start point;
-                             -3: Goal point;
-    Parameters:
-    -----------
-    map2d_ : array-like
-        an array with Real Numbers
-
-    path_ : array-like
-        an array of 2d corrdinates (of the path) in the format of [[x0, y0], [x1, y1], [x2, y2], ..., [x_end, y_end]]
-
-    title_ : string
-        information/description of the plot
-
-    Returns:
-    --------
-
-    '''
+    
 
     import matplotlib.cm as cm
     plt.interactive(False)
